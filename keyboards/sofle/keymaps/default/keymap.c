@@ -272,6 +272,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 if (keymap_config.swap_lctl_lgui) {
                     register_mods(mod_config(MOD_LALT));
                     register_code(KC_RIGHT);
+                    unregister_mods(mod_config(MOD_LALT));
                 } else {
                     register_mods(mod_config(MOD_LCTL));
                     register_code(KC_RIGHT);
